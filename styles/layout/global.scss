@@ -1,0 +1,90 @@
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  // @include laptop {
+  //   $header1: 3rem;
+  //   $header2: 4.5rem;
+  //   $header3: 3.5rem;
+  //   $header4: 2.5rem;
+  //   $text: 3rem;
+  //   $main: 6rem;
+  // }
+}
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Ruhl", sans-serif;
+  animation: opening 1s ease-in-out;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+button[type="button"] {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+a {
+  color: $gray-text;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+img {
+  display: block;
+  // width: 100%;
+  // height: 100%;
+}
+
+h1 {
+  font-family: "Vibes", sans-serif;
+  font-size: $header1;
+  margin: 0;
+}
+
+li,
+button,
+label,
+input,
+a,
+p {
+  font-size: $text;
+}
+
+h2 {
+  font-size: $header2;
+}
+h3 {
+  font-size: $header3;
+}
+h4,
+h5 {
+  font-size: $header4;
+}
+
+@keyframes opening {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

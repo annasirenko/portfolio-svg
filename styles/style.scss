@@ -1,26 +1,36 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+$header1: 2.5rem;
+$header2: 4rem;
+$header3: 2.5rem;
+$header4: 2rem;
+$text: 2.5rem;
+$gradient: linear-gradient(left, #38d39f, #38a4d3);
+$bg-color: #154353;
+$gray-text: #2c2c2c;
 
-  h2 {
-    font-size: 20px;
-    color: aqua;
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin container {
+  width: 95%;
+  margin: 0 0 auto;
+}
+
+@mixin sm-laptop {
+  @media screen and (max-width: 1080px) {
+    @content;
   }
 }
 
-p {
-  width: 20%;
+@mixin tablets {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
 }
-
-button {
-  padding: 2px 5px;
-  background-color: blue;
-  font-size: 20px;
-}
+@import "./layout/normalize";
+@import "./layout/global";
+@import "./blocks/home/header";
+@import "./blocks/home/intro";
