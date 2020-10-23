@@ -13,12 +13,18 @@
     display: inline-block;
   }
   h3 {
-    font-size: 3rem;
+    font-size: 5rem;
     padding: 2rem 0rem;
   }
   p {
     padding-top: 1.6rem;
     color: $gray-text;
+  }
+  &_text {
+    @include tablets {
+      margin-top: 5rem;
+      text-align: center;
+    }
   }
   &_text,
   &_images {
@@ -27,21 +33,36 @@
   &_images svg {
     width: 95%;
     height: 95%;
-    @include tablets {
-      width: 80%;
-    }
+    // @include phones {
+    //   height: 60%;
+    //   width: 80%;
+    // }
   }
 
   &_text-social {
     display: flex;
     margin-top: 4rem;
+    @include tablets {
+      justify-content: center;
+    }
+    & li:last-child {
+      margin-right: 0;
+    }
   }
 }
 
 .social-icon {
+  display: block;
+  fill: url(#myGradient);
   width: 4rem;
   height: 4rem;
   margin-right: 3rem;
+
+  @include phones {
+    width: 6rem;
+    height: 6rem;
+    margin-right: 3rem;
+  }
 }
 
 .splash {
@@ -50,10 +71,76 @@
   right: 0;
   height: 100%;
   z-index: -1;
+  // @include phones {
+  //   display: none;
+  // }
+  &-sm {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+    display: none;
+    @include phones {
+      display: block;
+    }
+  }
+
+  @include sm-laptop {
+    right: -60%;
+  }
+  @include tablets {
+    right: -75%;
+  }
 }
 
 .active {
   background: $gray-text;
   color: #fff;
   padding: 1rem 3rem;
+  border-radius: 2rem;
+}
+
+#leaf {
+  animation: leaf 1.5s ease infinite alternate;
+}
+#plant {
+  animation: leaf 1.5s ease infinite alternate 0.5s;
+}
+
+#me {
+  animation: me 1s ease infinite alternate;
+  transform-origin: bottom;
+}
+#arrow {
+  animation: clock 1.5s infinite linear;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+
+@keyframes me {
+  from {
+    transform: rotateZ(-5deg);
+  }
+  to {
+    transform: rotateZ(5deg);
+  }
+}
+
+@keyframes leaf {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-30%);
+  }
+}
+
+@keyframes clock {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
 }

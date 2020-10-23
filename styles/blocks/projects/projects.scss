@@ -1,0 +1,53 @@
+.projects {
+  width: 90%;
+  margin: auto;
+  min-height: 90vh;
+  flex-wrap: wrap;
+  @include flex(space-between, center, row);
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    // flex: 1 1 40rem;
+
+    // display: flex;
+    // flex-wrap: wrap;
+    // @include lg-laptop {
+    //   width: 90%;
+    //   margin: 0 auto;
+    // }
+    // @include laptop {
+    //   width: 80%;
+    // }
+    // @include md-laptop {
+    //   width: 100%;
+    // }
+    @include hybrid-laptop {
+      grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    }
+    // @include sm-laptop {
+    //   width: 65%;
+    // }
+    // @include tablets {
+    //   width: 88%;
+    // }
+
+    & li {
+      grid-row: auto;
+      grid-column: auto;
+      //   margin: 3rem 5rem 5rem 0;
+      //   & h2 {
+      //     margin-bottom: 3rem;
+      //   }
+
+      //   &:nth-child(2n) {
+      //     margin-right: 0;
+      //   }
+      // }
+    }
+  }
+}

@@ -1,22 +1,19 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
-  // @include laptop {
-  //   $header1: 3rem;
-  //   $header2: 4.5rem;
-  //   $header3: 3.5rem;
-  //   $header4: 2.5rem;
-  //   $text: 3rem;
-  //   $main: 6rem;
-  // }
-}
-body,
-html {
-  height: 100%;
+  @include sm-laptop {
+    font-size: 53%;
+  }
+  @include tablets {
+    font-size: 62.5%;
+  }
+  @include phones {
+    font-size: 45%;
+  }
 }
 
 body {
-  font-family: "Ruhl", sans-serif;
+  font-family: "Montserrat", sans-serif;
   animation: opening 1s ease-in-out;
 }
 

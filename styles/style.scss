@@ -3,7 +3,7 @@ $header2: 4rem;
 $header3: 2.5rem;
 $header4: 2rem;
 $text: 2.5rem;
-$gradient: linear-gradient(left, #38d39f, #38a4d3);
+$gradient: linear-gradient(left, #3129ba, #d84f03);
 $bg-color: #154353;
 $gray-text: #2c2c2c;
 
@@ -19,6 +19,29 @@ $gray-text: #2c2c2c;
   margin: 0 0 auto;
 }
 
+@mixin lg-laptop {
+  @media screen and (max-width: 2560px) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media screen and (max-width: 1800px) {
+    @content;
+  }
+}
+
+@mixin md-laptop {
+  @media screen and (max-width: 1500px) {
+    @content;
+  }
+}
+
+@mixin hybrid-laptop {
+  @media screen and (max-width: 1400px) {
+    @content;
+  }
+}
+
 @mixin sm-laptop {
   @media screen and (max-width: 1080px) {
     @content;
@@ -30,7 +53,14 @@ $gray-text: #2c2c2c;
     @content;
   }
 }
+
+@mixin phones {
+  @media screen and (max-width: 426px) {
+    @content;
+  }
+}
 @import "./layout/normalize";
 @import "./layout/global";
 @import "./blocks/home/header";
 @import "./blocks/home/intro";
+@import "./blocks/projects/projects";

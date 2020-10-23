@@ -9,9 +9,13 @@
       content="Anna Sirenko is a Junior Front End Developer who specializes in producing HTML, CSS and JS for websites. "
     />
     <meta name="robots" content="index,follow" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" type="image/png" href="./icons/code.svg" />
     <link rel="stylesheet" href="./styles/style.css" />
-    <title>Anna Sirenko| Front End Developer</title>
+    <title>Anna Sirenko | Front End Developer</title>
   </head>
   <body>
     <header class="main-head">
@@ -21,8 +25,8 @@
           <h1>Anna Sirenko</h1>
         </div>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/">Projects</a></li>
+          <li><a class="active" href="/">Home</a></li>
+          <li><a href="./blocks/projects/index.html">Projects</a></li>
           <li><a href="/">Contact</a></li>
         </ul>
       </nav>
@@ -48,10 +52,13 @@
             /></a>
           </li>
           <li>
-            <a href="#" target="_blank"
-              ><img src="./icons/linked-in.svg" alt=linkedin-social-link"
-              class="social-icon"></a
-            >
+            <a href="#" target="_blank">
+              <!-- <svg class="social-icon">
+                <use xlink:href="./icons/sprite.svg#linkedin"></use>
+              </svg> -->
+              <img src="./icons/linked-in.svg" alt=linkedin-social-link"
+              class="social-icon">
+            </a>
           </li>
         </ul>
       </div>
@@ -313,7 +320,7 @@
               <path
                 id="Vector_46"
                 d="M1021.86 592.352C1022.79 624.302 1004.12 636.011 980.697 636.695C980.152 636.711 979.611 636.721 979.071 636.725C977.985 636.733 976.909 636.715 975.844 636.67C954.655 635.791 937.883 624.543 937.016 594.83C936.118 564.08 974.285 524.127 977.148 521.172L977.153 521.169C977.262 521.056 977.318 521 977.318 521C977.318 521 1020.93 560.405 1021.86 592.352Z"
-                fill="#D0CDE1"
+                fill="#38D39F"
               />
               <path
                 id="Vector_47"
@@ -324,6 +331,7 @@
           </g>
         </svg>
         <img src="./img/splash.svg" alt="" class="splash" />
+        <!-- <img src="./img/splash-sm.svg" alt="" class="splash-sm" /> -->
       </div>
     </section>
   </body>
