@@ -2,8 +2,17 @@
   width: 90%;
   margin: auto;
   min-height: 90vh;
-  flex-wrap: wrap;
+  text-align: center;
   @include flex(space-between, center, row);
+  h2 {
+    margin: 5rem;
+  }
+
+  img {
+    width: 100%;
+
+    cursor: pointer;
+  }
   ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -11,6 +20,13 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    @include lg-laptop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include laptop {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     // flex: 1 1 40rem;
 
@@ -26,7 +42,7 @@
     // @include md-laptop {
     //   width: 100%;
     // }
-    @include hybrid-laptop {
+    @include sm-laptop {
       grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
     }
     // @include sm-laptop {
@@ -49,5 +65,19 @@
       //   }
       // }
     }
+  }
+}
+
+.hover-zoom {
+  overflow: hidden;
+  border-radius: 3rem;
+  &--blur img {
+    transition: transform 1s ease-in-out;
+    // filter: blur(2px);
+    transform: scale(1);
+  }
+  &--blur:hover img {
+    // filter: blur(0);
+    transform: scale(1.2);
   }
 }
