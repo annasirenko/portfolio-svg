@@ -10,7 +10,6 @@
 
   img {
     width: 100%;
-
     cursor: pointer;
   }
   ul {
@@ -19,7 +18,7 @@
     grid-gap: 5rem;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 0 auto 4rem auto;
     @include lg-laptop {
       grid-template-columns: repeat(3, 1fr);
     }

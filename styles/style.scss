@@ -61,6 +61,8 @@ $gray-text: #2c2c2c;
 }
 @import "./layout/normalize";
 @import "./layout/global";
-@import "./blocks/home/header";
-@import "./blocks/home/intro";
-@import "./blocks/projects/projects";
+@import "./blocks/header";
+@import "./blocks/intro";
+@import "./blocks/projects";
+@import "./blocks/contact";
+@import "./blocks/footer";

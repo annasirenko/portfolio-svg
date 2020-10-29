@@ -69,28 +69,17 @@
   position: absolute;
   top: 0;
   right: 0;
-  height: 100%;
+  height: 102%;
   z-index: -1;
-  // @include phones {
-  //   display: none;
+  // @include lg-laptop {
+  //   height: 108%;
   // }
-  &-sm {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    z-index: -1;
-    display: none;
-    @include phones {
-      display: block;
-    }
-  }
+  // @include tablets {
+  //   height: 100%;
+  // }
 
-  @include sm-laptop {
-    right: -60%;
-  }
   @include tablets {
-    right: -75%;
+    display: none;
   }
 }
 

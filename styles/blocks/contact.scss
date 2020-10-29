@@ -1,0 +1,87 @@
+.contact {
+  min-height: 80vh;
+  @include flex(center, center, row);
+  margin-top: 3rem;
+  &_wrapper {
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    // min-width: 40rem;
+    background: #fff;
+    // padding: 4rem;
+    padding: 3rem 10rem;
+    border-radius: 2rem;
+    box-shadow: 0 10px 10px rgba($color: #000000, $alpha: 0.2),
+      0 20px 40px rgba($color: #000000, $alpha: 0.2);
+    input {
+      padding: 1rem 0;
+      margin-bottom: 3rem;
+    }
+    textarea {
+      min-height: 9rem;
+      padding: 1rem 0;
+      margin-bottom: 4rem;
+      font-family: "Montserrat", sans-serif;
+      font-size: 2rem;
+    }
+    input,
+    & textarea {
+      width: 100%;
+      outline: none;
+      border: none;
+      border-bottom: 2px solid $gray-text;
+    }
+    button {
+      width: 100%;
+      padding: 1rem 2rem;
+      border: 2px solid transparent;
+      background: $bg-color;
+      color: #fff;
+      text-transform: uppercase;
+      transition: all 0.3s ease-in-out;
+      outline: none;
+      &:hover,
+      &:focus {
+        border: 2px solid;
+        border-image: $gradient;
+        border-image-slice: 1;
+        color: $gray-text;
+        background: transparent;
+      }
+    }
+    form {
+      div {
+        position: relative;
+        label {
+          position: absolute;
+          top: 1rem;
+          left: 0;
+          pointer-events: none;
+          transition: all 0.5s ease;
+        }
+      }
+    }
+    input:focus ~ label,
+    & textarea:focus ~ label,
+    input:valid ~ label,
+    & textarea:valid ~ label {
+      top: -1.6rem;
+      left: 0;
+      background: $gradient;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    input:focus,
+    & textarea:focus,
+    input:valid,
+    & textarea:valid {
+      border-bottom: 2px solid;
+      border-image: $gradient;
+      border-image-slice: 1;
+    }
+  }
+}

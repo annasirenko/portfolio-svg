@@ -29,9 +29,44 @@
         <ul>
           <li><a href="../../index.html">Home</a></li>
           <li><a href="../projects/index.html">Projects</a></li>
-          <li><a class="active" href="/">Contact</a></li>
+          <li><a class="active" href="./index.html">Contact</a></li>
         </ul>
       </nav>
     </header>
+    <section class="contact">
+      <div class="contact_wrapper">
+        <form action="https://formspree.io/f/xpzorqjz" method="POST">
+          <div>
+            <input
+              type="text"
+              id="text"
+              name="name"
+              required
+              autocomplete="off"
+            />
+            <label for="text">Name</label>
+          </div>
+          <div>
+            <input
+              type="email"
+              id="email"
+              name="_replyto"
+              required
+              autocomplete="off"
+            />
+            <label for="email">Email</label>
+          </div>
+          <div>
+            <textarea id="textarea" name="message" required></textarea>
+            <label for="textarea">Message</label>
+          </div>
+          <button value="Send" type="submit">Send</button>
+        </form>
+      </div>
+      <img src="../../img/splash-sm.svg" alt="" class="splash" />
+    </section>
+    <footer>
+      <h4>Anna Sirenko &copy; 2020</h4>
+    </footer>
   </body>
 </html>
